@@ -1,0 +1,8 @@
+---- pid.times Matches (11 in 1 files) ----
+Pid.c (c:\users\barry.bai\desktop\position_pid\pid（0929更新，避免过冲）):    pid.times=0;
+Pid.c (c:\users\barry.bai\desktop\position_pid\pid（0929更新，避免过冲）):  if(pid.times<=60)//3分钟 72度  100s
+Pid.c (c:\users\barry.bai\desktop\position_pid\pid（0929更新，避免过冲）): if((pid.times>60)&&(pid.times<=100))//3分钟 96度  100s
+Pid.c (c:\users\barry.bai\desktop\position_pid\pid（0929更新，避免过冲）): if((pid.times>100)&&(pid.times<=200))//2分钟 102度 100s
+Pid.c (c:\users\barry.bai\desktop\position_pid\pid（0929更新，避免过冲）): if((pid.times>200)&&(pid.times<=300))//2分钟 108度 100s
+Pid.c (c:\users\barry.bai\desktop\position_pid\pid（0929更新，避免过冲）):  if((pid.times>300)&&(pid.times<=400))//2分钟 114度 100s
+Pid.c (c:\users\barry.bai\desktop\position_pid\pid（0929更新，避免过冲）): if(pid.times>400)
