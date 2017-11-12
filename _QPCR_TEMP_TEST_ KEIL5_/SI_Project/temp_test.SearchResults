@@ -1,0 +1,373 @@
+---- USART2_BUSY Matches (3 in 2 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u8 USART2_BUSY = 0;
+Stm32f2xx_it.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):extern u8 USART2_BUSY ;
+Stm32f2xx_it.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):        USART2_BUSY = 0;
+---- RES Matches (2 in 1 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u16 RES[30] = {9844 ,9849 ,9843 ,9842 ,9848 ,9847 ,9846 ,9853 ,9853 ,9851 ,9849 ,9848 ,9857 ,9851 ,9857 ,9851 };
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            REF_R.u16_D[i] = RES[i];      //由于RES[]该数组的每一个元素是u16，所以现在要保存16个数据，则需要16*2Bytes空间
+---- Col_DATA Matches (14 in 1 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u16 Col_DATA = 0;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Col_DATA = 0;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                    Col_DATA *= 10;                       
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                    Col_DATA += RxBuffer_3[7 + i] - 48;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                    Col_DATA *= 10; 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                    Col_DATA += RxBuffer_3[7 + i] - 48; 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Tem = Col_DATA* Tem / ADC_Value[CHANNLE_X];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Tem = Col_DATA*10 -320;//找到元素在数组中的位置
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Bit_R = Col_DATA%10;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                          Col_DATA = 0;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                              Col_DATA *= 10;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                              Col_DATA += Tem[i];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                          Col_Temp = Col_DATA;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                              Temp_1 = Col_DATA* Temp_1 / ADC_Value[Set_ChX-1];//计算内部阻值
+---- ADC_Value Matches (20 in 2 files) ----
+ADS8832.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):extern  u16 ADC_Value[20];
+ADS8832.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):        ADC_Value[i] = SPI_I2S_ReceiveData(SPI1);
+ADS8832.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):        ADC_Value[i] = Mid_Data_Filter(ADC_Value[i] , Mid_Filt_Win , i);//Mid_Data_Num 为奇数
+ADS8832.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):        ADC_Value[i+8] = SPI_I2S_ReceiveData(SPI1);
+ADS8832.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):        ADC_Value[i+8] = Mid_Data_Filter(ADC_Value[i+8] , Mid_Filt_Win , i+8);//Mid_Data_Num 为奇数
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u16 ADC_Value[200] = {0};
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                ADC_Value[i] = Corr_K_B(i,ADC_Value[i]);
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                    Temp[i+1] = Calculate_Temp_SZ(ADC_Value[i] , REF_R.u16_D[i] , 2.042 );//ADC_Value[i] 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                    INT_To_ASCII(ADC_Value[i], lptr);
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Tem = 65535 - ADC_Value[CHANNLE_X];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Tem = Col_DATA* Tem / ADC_Value[CHANNLE_X];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Tem = 65535 - ADC_Value[CHANNLE_X];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Tem = (u16)(Tem_R* Tem / ADC_Value[CHANNLE_X]); if((Tem<11000)&&(Tem > 9000))
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                              Temp_1 = 65535 - ADC_Value[Set_ChX-1];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                              Temp_1 = Col_DATA* Temp_1 / ADC_Value[Set_ChX-1];//计算内部阻值
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                              Temp_1 = 65535 - ADC_Value[Set_ChX-1];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                              Temp_1 = (u16)(Tem_R* Temp_1 / ADC_Value[Set_ChX-1]); 
+---- countof Matches (3 in 1 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):#define BUFFER_SIZE1             (countof(Tx1_Buffer)-1)
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):#define BUFFER_SIZE2             (countof(Tx2_Buffer)-1)
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):#define countof(a) (sizeof(a) / sizeof(*(a)))
+---- Corr_K_B Matches (10 in 3 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                ADC_Value[i] = Corr_K_B(i,ADC_Value[i]);
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u16 Corr_K_B(u8 Channel,u16 AD_Temp)
+Main.h (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u16 Corr_K_B(u8 Channel,u16 AD_Temp);
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<P><STRONG><a name="[75]"></a>Corr_K_B</STRONG> (Thumb, 98 bytes, Stack size 32 bytes, main.o(.text))
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = Corr_K_B &rArr; __aeabi_fadd &rArr; _float_epilogue
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Corr_K_B
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Corr_K_B
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Corr_K_B
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Corr_K_B
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Corr_K_B
+---- Corr_K_B Matches (10 in 3 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                ADC_Value[i] = Corr_K_B(i,ADC_Value[i]);
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u16 Corr_K_B(u8 Channel,u16 AD_Temp)
+Main.h (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u16 Corr_K_B(u8 Channel,u16 AD_Temp);
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<P><STRONG><a name="[75]"></a>Corr_K_B</STRONG> (Thumb, 98 bytes, Stack size 32 bytes, main.o(.text))
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = Corr_K_B &rArr; __aeabi_fadd &rArr; _float_epilogue
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Corr_K_B
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Corr_K_B
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Corr_K_B
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Corr_K_B
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Corr_K_B
+---- Out_Flag Matches (3 in 1 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u8 Out_Flag = 0;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                if(Out_Flag == 0)//输出温度值
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):             Out_Flag = RxBuffer_3[6] - 48;
+---- Col_Channel Matches (5 in 1 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u16 Col_Channel = 0xFF;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Col_Channel = 0;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Col_Channel = RxBuffer_3[7] - 55;  //ASCII码表中，‘7’= 55
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Col_Channel *= 16; //0XF * 16 = 0XF0
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Col_Channel += RxBuffer_3[8] - 55; //OXF0 + 0X0F = 0XFF
+---- Col_Channel Matches (5 in 1 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u16 Col_Channel = 0xFF;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Col_Channel = 0;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Col_Channel = RxBuffer_3[7] - 55;  //ASCII码表中，‘7’= 55
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Col_Channel *= 16; //0XF * 16 = 0XF0
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Col_Channel += RxBuffer_3[8] - 55; //OXF0 + 0X0F = 0XFF
+---- TwoPoint_To_ASCII Matches (5 in 3 files) ----
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<P><STRONG><a name="[d5]"></a>TwoPoint_To_ASCII</STRONG> (Thumb, 398 bytes, Stack size 56 bytes, system_init.o(.text), UNUSED)
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TwoPoint_To_ASCII
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<BR><BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TwoPoint_To_ASCII
+System_Init.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):void* TwoPoint_To_ASCII(float data,char* lptr)
+System_Init.h (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):void* TwoPoint_To_ASCII(float data,char* lptr);
+---- TwoPoint_To_ASCII Matches (5 in 3 files) ----
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<P><STRONG><a name="[d5]"></a>TwoPoint_To_ASCII</STRONG> (Thumb, 398 bytes, Stack size 56 bytes, system_init.o(.text), UNUSED)
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TwoPoint_To_ASCII
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<BR><BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TwoPoint_To_ASCII
+System_Init.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):void* TwoPoint_To_ASCII(float data,char* lptr)
+System_Init.h (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):void* TwoPoint_To_ASCII(float data,char* lptr);
+---- Mid_Filt_Win Matches (7 in 2 files) ----
+ADS8832.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):extern  u8 Mid_Filt_Win;
+ADS8832.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):        ADC_Value[i] = Mid_Data_Filter(ADC_Value[i] , Mid_Filt_Win , i);//Mid_Data_Num 为奇数
+ADS8832.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):        ADC_Value[i+8] = Mid_Data_Filter(ADC_Value[i+8] , Mid_Filt_Win , i+8);//Mid_Data_Num 为奇数
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u8 Mid_Filt_Win = 19;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Mid_Filt_Win = RxBuffer_3[5] - 48;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            if((Mid_Filt_Win % 2)== 0)//滤波窗口设置为偶数 自动加一变奇数
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                Mid_Filt_Win ++;
+---- Mid_Data_Filter Matches (8 in 4 files) ----
+ADS8832.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):        ADC_Value[i] = Mid_Data_Filter(ADC_Value[i] , Mid_Filt_Win , i);//Mid_Data_Num 为奇数
+ADS8832.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):        ADC_Value[i+8] = Mid_Data_Filter(ADC_Value[i+8] , Mid_Filt_Win , i+8);//Mid_Data_Num 为奇数
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u16 Mid_Data_Filter(u16 CHx_Value , u16 Mid_Num , u8 Chx)//Mid_Data_Num 为奇数
+Main.h (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u16 Mid_Data_Filter(u16 CHx_Value , u16 Mid_Num , u8 Chx);//Mid_Data_Num 为奇数
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<P><STRONG><a name="[9d]"></a>Mid_Data_Filter</STRONG> (Thumb, 216 bytes, Stack size 24 bytes, main.o(.text))
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Mid_Data_Filter
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = ADS8832_16Channel_Sample &rArr; Mid_Data_Filter
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mid_Data_Filter
+---- Col_Channel Matches (5 in 1 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u16 Col_Channel = 0xFF;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Col_Channel = 0;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Col_Channel = RxBuffer_3[7] - 55;  //ASCII码表中，‘7’= 55
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Col_Channel *= 16; //0XF * 16 = 0XF0
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Col_Channel += RxBuffer_3[8] - 55; //OXF0 + 0X0F = 0XFF
+---- Rate_Out Matches (6 in 1 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u16 Rate_Out = 10;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Rate_Out = (RxBuffer_3[3] - 48)*10;//串口输出速率调整，最大50Hz 25 18 12 10 8 7 6 5 4 3 2 1
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Rate_Out += (RxBuffer_3[4] - 48);
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            if(Rate_Out > 50)
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                Rate_Out = 50;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Col_Times = 50 / Rate_Out*2;
+---- Col_Channel Matches (5 in 1 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u16 Col_Channel = 0xFF;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Col_Channel = 0;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Col_Channel = RxBuffer_3[7] - 55;  //ASCII码表中，‘7’= 55
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Col_Channel *= 16; //0XF * 16 = 0XF0
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Col_Channel += RxBuffer_3[8] - 55; //OXF0 + 0X0F = 0XFF
+---- k Matches (102 in 1 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u16 k = 0;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):    u16 k = 0;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0xA5;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0x5A;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X09;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X82;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X00;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X00 + i*7;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                            USART_Tx2[k++]= arr[z];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0xA5;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0x5A;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X09;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X82;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X00;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X00 + i*7;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                            USART_Tx2[k++]= arr[z];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                USART_Tx2[k++] = 0xA5;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                USART_Tx2[k++] = 0x5A;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                USART_Tx2[k++] = 0X12;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                USART_Tx2[k++] = 0X84;//画图
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                USART_Tx2[k++] = 0xFF;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = Line_Data >> 8;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = Line_Data;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                        USART_Tx2[k++] = 0xA5;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                        USART_Tx2[k++] = 0x5A;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                        USART_Tx2[k++] = 0X05;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                        USART_Tx2[k++] = 0X82;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                        USART_Tx2[k++] = 0X01;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                        USART_Tx2[k++] = Display_Channel[i]-1;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                        USART_Tx2[k++] = 0X00;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                        USART_Tx2[k++] = i;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                        USART_Tx2[k++] = 0xA5;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                        USART_Tx2[k++] = 0x5A;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                        USART_Tx2[k++] = 0X05;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                        USART_Tx2[k++] = 0X82;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                        USART_Tx2[k++] = 0X01;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                        USART_Tx2[k++] = i-1;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                        USART_Tx2[k++] = 0X00;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                        USART_Tx2[k++] = 0x00;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                USART_Tx2[k++] = 0xA5;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                USART_Tx2[k++] = 0x5A;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                USART_Tx2[k++] = 0X0A;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                USART_Tx2[k++] = 0X82;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                USART_Tx2[k++] = 0X03;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                USART_Tx2[k++] = 0X20 ;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                        USART_Tx2[k++]= arr[z];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0xA5;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0x5A;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X05;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X82;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X03;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0x40;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X00;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0x01;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0xA5;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0x5A;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X05;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X82;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X03;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X41;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X00;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0x02;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0xA5;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0x5A;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X05;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X82;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X03;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0x40;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X00;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0x00;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0xA5;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0x5A;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X05;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X82;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X03;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X41;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0X00;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                    USART_Tx2[k++] = 0x03;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):    USART1_Tx(k);
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):    u8 k = 0;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     k = 0;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     USART_Tx2[k++] = 0xA5;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     USART_Tx2[k++] = 0x5A;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     USART_Tx2[k++] = 0X05;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     USART_Tx2[k++] = 0X82;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     USART_Tx2[k++] = 0X03;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     USART_Tx2[k++] = 0X00 ;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     USART_Tx2[k++] = 0X5F ;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     USART_Tx2[k++] = 0X5F ;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     USART_Tx2[k++] = 0xA5;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     USART_Tx2[k++] = 0x5A;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     USART_Tx2[k++] = 0X08;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     USART_Tx2[k++] = 0X82;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     USART_Tx2[k++] = 0X03;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     USART_Tx2[k++] = 0X10 ;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     USART_Tx2[k++] = 0X5F ;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     USART_Tx2[k++] = 0X5F ;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     USART_Tx2[k++] = 0X5F ;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     USART_Tx2[k++] = 0X5F ;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     USART_Tx2[k++] = 0X5F ;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                     USART1_Tx(k);
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                              k = 0;
+---- Corr_K_B Matches (10 in 3 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                ADC_Value[i] = Corr_K_B(i,ADC_Value[i]);
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u16 Corr_K_B(u8 Channel,u16 AD_Temp)
+Main.h (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u16 Corr_K_B(u8 Channel,u16 AD_Temp);
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<P><STRONG><a name="[73]"></a>Corr_K_B</STRONG> (Thumb, 98 bytes, Stack size 32 bytes, main.o(.text))
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = Corr_K_B &rArr; __aeabi_fadd &rArr; _float_epilogue
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Corr_K_B
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Corr_K_B
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Corr_K_B
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Corr_K_B
+QPCR_TEMP.htm (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\obj):<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Corr_K_B
+---- ADC_Value Matches (20 in 2 files) ----
+ADS8832.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):extern  u16 ADC_Value[20];
+ADS8832.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):        ADC_Value[i] = SPI_I2S_ReceiveData(SPI1);
+ADS8832.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):        ADC_Value[i] = Mid_Data_Filter(ADC_Value[i] , Mid_Filt_Win , i);//Mid_Data_Num 为奇数
+ADS8832.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):        ADC_Value[i+8] = SPI_I2S_ReceiveData(SPI1);
+ADS8832.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):        ADC_Value[i+8] = Mid_Data_Filter(ADC_Value[i+8] , Mid_Filt_Win , i+8);//Mid_Data_Num 为奇数
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u16 ADC_Value[200] = {0};
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                ADC_Value[i] = Corr_K_B(i,ADC_Value[i]);
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):										Temp[i+1] = Calculate_Temp_SZ(ADC_Value[i] , REF_R.u16_D[i] , 2.041 );//ADC_Value[i] 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                    INT_To_ASCII(ADC_Value[i], lptr);
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Tem = 65535 - ADC_Value[CHANNLE_X];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Tem = Col_DATA* Tem / ADC_Value[CHANNLE_X];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Tem = 65535 - ADC_Value[CHANNLE_X];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Tem = (u16)(Tem_R* Tem / ADC_Value[CHANNLE_X]); 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                              Temp_1 = 65535 - ADC_Value[Set_ChX-1];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                              Temp_1 = Col_DATA* Temp_1 / ADC_Value[Set_ChX-1];//计算内部阻值
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                              Temp_1 = 65535 - ADC_Value[Set_ChX-1];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                              Temp_1 = (u16)(Tem_R* Temp_1 / ADC_Value[Set_ChX-1]); 
+---- ADC_Value Matches (20 in 2 files) ----
+ADS8832.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):extern  u16 ADC_Value[20];
+ADS8832.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):        ADC_Value[i] = SPI_I2S_ReceiveData(SPI1);
+ADS8832.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):        ADC_Value[i] = Mid_Data_Filter(ADC_Value[i] , Mid_Filt_Win , i);//Mid_Data_Num 为奇数
+ADS8832.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):        ADC_Value[i+8] = SPI_I2S_ReceiveData(SPI1);
+ADS8832.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\hardware):        ADC_Value[i+8] = Mid_Data_Filter(ADC_Value[i+8] , Mid_Filt_Win , i+8);//Mid_Data_Num 为奇数
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u16 ADC_Value[200] = {0};
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                ADC_Value[i] = Corr_K_B(i,ADC_Value[i]);
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):										Temp[i+1] = Calculate_Temp_SZ(ADC_Value[i] , REF_R.u16_D[i] , 2.041 );//ADC_Value[i] 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                    INT_To_ASCII(ADC_Value[i], lptr);
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Tem = 65535 - ADC_Value[CHANNLE_X];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Tem = Col_DATA* Tem / ADC_Value[CHANNLE_X];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Tem = 65535 - ADC_Value[CHANNLE_X];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Tem = (u16)(Tem_R* Tem / ADC_Value[CHANNLE_X]); 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                              Temp_1 = 65535 - ADC_Value[Set_ChX-1];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                              Temp_1 = Col_DATA* Temp_1 / ADC_Value[Set_ChX-1];//计算内部阻值
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                              Temp_1 = 65535 - ADC_Value[Set_ChX-1];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                              Temp_1 = (u16)(Tem_R* Temp_1 / ADC_Value[Set_ChX-1]); 
+---- UP_Res Matches (3 in 2 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):float Calculate_Temp_SZ(u16 AD_Res , float UP_Res , float V_ref )
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):        Res   = V_Res*UP_Res/(V_ref - V_Res);//计算电阻
+Main.h (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):float Calculate_Temp_SZ(u16 AD_Res , float UP_Res , float V_ref );
+---- REF_R Matches (13 in 1 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):ORIGIN_DATA REF_R;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):        sEE_ReadBuffer(REF_R.u8_D, 0x02, (uint16_t *)(&NumDataRead));//02+32 地址存储r值
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            REF_R.u16_D[i] = RES[i];      //由于RES[]该数组的每一个元素是u16，所以现在要保存16个数据，则需要16*2Bytes空间
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):        sEE_WriteBuffer(REF_R.u8_D, 0X02, 32); 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):										Temp[i+1] = Calculate_Temp_SZ(ADC_Value[i] , REF_R.u16_D[i] , 2.041 );//ADC_Value[i] 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                     REF_R.u16_D[CHANNLE_X] = Tem;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                     sEE_WriteBuffer(REF_R.u8_D, 0x02, 2*(CHANNLE_X+1)); 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                     REF_R.u16_D[CHANNLE_X] = Tem;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                     sEE_WriteBuffer(REF_R.u8_D, 0x02, 2*(CHANNLE_X+1)); 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                  REF_R.u16_D[Set_ChX-1] = Temp_1;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                  sEE_WriteBuffer(REF_R.u8_D, 0x02, 2*(Set_ChX-1)); 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                  REF_R.u16_D[Set_ChX-1] = Temp_1;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                  sEE_WriteBuffer(REF_R.u8_D, 0x02, 2*(Set_ChX)); 
+---- REF_R Matches (13 in 1 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):ORIGIN_DATA REF_R;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):        sEE_ReadBuffer(REF_R.u8_D, 0x02, (uint16_t *)(&NumDataRead));//02+32 地址存储r值
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            REF_R.u16_D[i] = RES[i];      //由于RES[]该数组的每一个元素是u16，所以现在要保存16个数据，则需要16*2Bytes空间
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):        sEE_WriteBuffer(REF_R.u8_D, 0X02, 32); 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):										Temp[i+1] = Calculate_Temp_SZ(ADC_Value[i] , REF_R.u16_D[i] , 2.041 );//ADC_Value[i] 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                     REF_R.u16_D[CHANNLE_X] = Tem;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                     sEE_WriteBuffer(REF_R.u8_D, 0x02, 2*(CHANNLE_X+1)); 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                     REF_R.u16_D[CHANNLE_X] = Tem;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                     sEE_WriteBuffer(REF_R.u8_D, 0x02, 2*(CHANNLE_X+1)); 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                  REF_R.u16_D[Set_ChX-1] = Temp_1;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                  sEE_WriteBuffer(REF_R.u8_D, 0x02, 2*(Set_ChX-1)); 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                  REF_R.u16_D[Set_ChX-1] = Temp_1;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                                  sEE_WriteBuffer(REF_R.u8_D, 0x02, 2*(Set_ChX)); 
+---- Temp_Comp Matches (5 in 2 files) ----
+Temp_correct.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):const float Temp_Comp[20] = {105.00, 95.00, 90.00, 70.00, 60.00, 50.00, 30.00};
+Temp_correct.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):	if(temprature >= Temp_Comp[3])
+Temp_correct.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):		while(temprature >= Temp_Comp[3-i])
+Temp_correct.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):		while(temprature < Temp_Comp[3+i])
+Temp_correct.h (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):const float Temp_Comp[20];
+---- Mid_data_buf Matches (9 in 1 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u16 Mid_data_buf[30][30] = {0};		 //中值滤波，滤除毛刺，平缓波形
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):   Mid_data_buf[Chx][Mid_count[Chx]++] = CHx_Value; 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):         if ( Mid_data_buf[Chx][i]>Mid_data_buf[Chx][i+1] )
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            temp = Mid_data_buf[Chx][i];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Mid_data_buf[Chx][i] = Mid_data_buf[Chx][i+1];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Mid_data_buf[Chx][i+1] = temp;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):   return Mid_data_buf[Chx][(Mid_Num-1)/2];
+---- Average_Count Matches (0 in 0 files) ----
+---- Average_Data Matches (2 in 1 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):    Average_Data[Chx][Average_Count[Chx]] = Current_CHx_Value;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):       Average_Sum = Average_Sum + Average_Data[Chx][i];
+---- Col_DATA Matches (19 in 1 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u32 Col_DATA = 0;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Col_DATA = 0;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                    Col_DATA *= 10;                       
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                    Col_DATA += RxBuffer_3[7 + i] - 48;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                    Col_DATA *= 10; 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                    Col_DATA += RxBuffer_3[7 + i] - 48; 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Tem = Col_DATA* Tem / ADC_Value[CHANNLE_X];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Tem = Col_DATA*10 -320;//找到元素在数组中的位置
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Bit_R = Col_DATA%10;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                          Col_DATA = 0;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):												Col_DATA *= 1;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):												Col_DATA += Tem[i]; 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):												Col_DATA *= 10;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):												Col_DATA += Tem[i];  
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                              Temp_1 = Col_DATA* Temp_1 / ADC_Value[Set_ChX-1];//计算内部阻值
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                              if((Col_DATA<(105000 + 200)) && (Col_DATA > (30000 - 200)))
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):																	  COR_T.u32_D[Set_ChX-1] = Col_DATA;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):																	  GOZ_T.u32_D[Set_ChX-8-1] = Col_DATA;
+---- Col_DATA Matches (20 in 1 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):u32 Col_DATA = 0;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):            Col_DATA = 0;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                    Col_DATA *= 10;                       
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                    Col_DATA += RxBuffer_3[7 + i] - 48;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                    Col_DATA *= 10; 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                    Col_DATA += RxBuffer_3[7 + i] - 48; 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Tem = Col_DATA* Tem / ADC_Value[CHANNLE_X];
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Tem = Col_DATA*10 -320;//找到元素在数组中的位置
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                Bit_R = Col_DATA%10;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                          Col_DATA = 0;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):												Col_DATA *= 1;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):												Col_DATA += Tem[i]; 
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):												Col_DATA *= 10;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):												Col_DATA += Tem[i];  
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                          Col_Temp = Col_DATA;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                              Temp_1 = Col_DATA* Temp_1 / ADC_Value[Set_ChX-1];//计算内部阻值
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                              if((Col_DATA<(105000 + 200)) && (Col_DATA > (30000 - 200)))
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):																	  COR_T.u32_D[Set_ChX-1] = Col_DATA;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):																	  GOZ_T.u32_D[Set_ChX-8-1] = Col_DATA;
+---- Tem[i] Matches (3 in 1 files) ----
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                              Tem[i] = RxBuffer_2[i] - 48;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):                                                  Tem[i] = 0;
+Main.c (c:\users\barry.bai\desktop\_qpcr_temp_test_ keil5_\user):												Col_DATA += Tem[i];  
